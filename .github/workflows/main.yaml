@@ -8,7 +8,7 @@ on:
       - "main"
 
 jobs:
-  install-node:
+  install-and-format:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,24 +21,10 @@ jobs:
           node-version: 18
 
       - name: Install Node modules
-        run: npm i
-
-  eslint:
-    runs-on: ubuntu-latest
-    needs: install-node
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+        run: npm ci
 
       - name: Lint Check
         run: npm run lint
 
-  prettier:
-    runs-on: ubuntu-latest
-    needs: install-node
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
       - name: Lint Check
         run: npm run prettier:check
