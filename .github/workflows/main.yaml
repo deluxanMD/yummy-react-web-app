@@ -21,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: Install Node modules
-        run: npm ci
+        run: npm i
 
   eslint:
     runs-on: ubuntu-latest
