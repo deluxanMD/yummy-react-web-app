@@ -28,3 +28,19 @@ jobs:
 
       - name: Lint Check
         run: npm run prettier:check
+
+      - name: Code Coverage
+        run: npm run test:coverage
+
+      - uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unittests
+          name: Upload reports to codecov
+          fail_ci_if_error: true
+          verbose: true
+      - run: |
+          curl -Os https://uploader.codecov.io/latest/linux/codecov
+          find . -iregex "codecov.*"
+          chmod +x codecov 
+          ./codecov -t ${CODECOV_TOKEN}

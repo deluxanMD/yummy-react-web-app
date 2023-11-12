@@ -19,6 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "CI=true npm test -- --env=jsdom --watchAll=false --coverage",
     "eject": "react-scripts eject",
     "ci": "npm install --frozen-lockfile",
     "lint": "npx eslint src --ext .js,.jsx,.ts,.tsx --fix",
