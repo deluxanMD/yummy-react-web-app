@@ -46,4 +46,4 @@ jobs:
           ./codecov -t ${CODECOV_TOKEN}
 
       - name: Build Project
-        run: npm build
+        run: npm run build
