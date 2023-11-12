@@ -21,9 +21,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ci": "npm install --frozen-lockfile",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
-    "prettier:check": "prettier --check src",
-    "prettier:fix": "prettier --write src"
+    "lint": "npx eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "prettier:check": "npx prettier --check src",
+    "prettier:fix": "npx prettier --write src"
   },
   "eslintConfig": {
     "extends": [
