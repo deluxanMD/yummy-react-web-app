@@ -45,6 +45,5 @@ jobs:
           chmod +x codecov 
           ./codecov -t ${CODECOV_TOKEN}
 
-  build:
-    needs: install-and-format
-    uses: ./.github/workflows/build.yaml
+      - name: Build Project
+        run: npm build
