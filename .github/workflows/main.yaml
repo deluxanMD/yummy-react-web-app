@@ -44,3 +44,7 @@ jobs:
           find . -iregex "codecov.*"
           chmod +x codecov 
           ./codecov -t ${CODECOV_TOKEN}
+
+  build:
+    needs: install-and-format
+    uses: ./.github/workflows/build.yaml
